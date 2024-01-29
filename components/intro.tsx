@@ -6,7 +6,8 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
-import { FaGithub, FaGithubSquare } from 'react-icons/fa';
+import { FaGithubSquare } from 'react-icons/fa';
+import './style.css';
 
 export default function Intro() {
     return (
@@ -43,18 +44,26 @@ export default function Intro() {
                     </motion.span>
                 </div>
             </div>
-            <motion.p
-                className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text:4xl"
+            <motion.div
+                className="mb-10 mt-4 px-4 font-medium !leading-[1.5] sm:text:4xl"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                <span className="font-bold">Hello, I'm Siddarth.</span>
-                I'm a <span className="font-bold">full-stack developer</span>. I
-                enjoy making a building web related stuffs.
-                <span className="font-bold">
-                    Currently focused towards learning Next.js & TypeScript.
+                <span className="px-4 mb-2 mt-2 text-xl">
+                    Hey there
+                    <span className="emoji">👋</span>, my name is{' '}
                 </span>
-            </motion.p>
+                <div className="text-5xl text-purple-800 px-4 mb-2 mt-2">
+                    Siddarth Banerjee
+                </div>
+                <div className="text-5xl">
+                    I "try" to make cool stuff for the web.
+                </div>
+                I'm from India,{' '}
+                <span className="font-bold">
+                    currently focused towards learning Next.js & TypeScript.
+                </span>
+            </motion.div>
             <motion.div
                 className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
                 initial={{ opacity: 0, y: 100 }}
@@ -71,14 +80,31 @@ export default function Intro() {
                     Contact me here.
                     <BsArrowRight className="opacity-70" />
                 </Link>
-                <a className="bg-white px-7 py-3 flex items-center gap-2 rounded-full">
-                    Download CV <HiDownload />
+                <a
+                    className="bg-white px-7 py-3 flex items-center gap-2 rounded-full cursor-pointer border border-black/10"
+                    href="/Resume_Siddarth.pdf"
+                    download
+                >
+                    Download CV{' '}
+                    <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
                 </a>
-                <a className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full">
-                    <BsLinkedin />
+                <a
+                    href="https://www.linkedin.com/in/siddarth-banerjee-163101202/"
+                    className="bg-transparent p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
+                >
+                    <BsLinkedin
+                        size={40}
+                        className="focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
+                    />
                 </a>
-                <a className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full">
-                    <FaGithubSquare />
+                <a
+                    className="bg-transparent p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
+                    href="https://github.com/Sid-bit28"
+                >
+                    <FaGithubSquare
+                        size={44}
+                        className="focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
+                    />
                 </a>
             </motion.div>
         </section>
