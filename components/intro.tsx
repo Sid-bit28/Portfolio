@@ -11,7 +11,7 @@ import './style.css';
 
 export default function Intro() {
     return (
-        <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
+        <section className="mb-15 max-w-full text-center sm:mb-0">
             <div className="flex items-center justify-center">
                 <div className="relative">
                     <motion.div
@@ -45,7 +45,7 @@ export default function Intro() {
                 </div>
             </div>
             <motion.div
-                className="mb-10 mt-4 px-4 font-medium !leading-[1.5] sm:text:4xl"
+                className="mb-10 mt-4 px-4 font-normal !leading-[1.5] sm:text:4xl"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >
@@ -53,10 +53,10 @@ export default function Intro() {
                     Hey there
                     <span className="emoji">👋</span>, my name is{' '}
                 </span>
-                <div className="text-5xl text-purple-800 px-4 mb-2 mt-2">
-                    Siddarth Banerjee
+                <div className="text-2xl sm:text-6xl text-purple-800 px-4 mb-2 mt-2 font-[600]">
+                    Siddarth Banerjee.
                 </div>
-                <div className="text-5xl">
+                <div className="text-2xl sm:text-6xl my-4 font-[500]">
                     I "try" to make cool stuff for the web.
                 </div>
                 I'm from India,{' '}
@@ -77,7 +77,7 @@ export default function Intro() {
                     className="bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
                 >
                     {' '}
-                    Contact me here.
+                    Contact me
                     <BsArrowRight className="opacity-70" />
                 </Link>
                 <a
@@ -88,24 +88,26 @@ export default function Intro() {
                     Download CV{' '}
                     <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
                 </a>
-                <a
-                    href="https://www.linkedin.com/in/siddarth-banerjee-163101202/"
-                    className="bg-transparent p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
-                >
-                    <BsLinkedin
-                        size={40}
-                        className="focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
-                    />
-                </a>
-                <a
-                    className="bg-transparent p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
-                    href="https://github.com/Sid-bit28"
-                >
-                    <FaGithubSquare
-                        size={44}
-                        className="focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
-                    />
-                </a>
+                <div className="flex flex-row">
+                    <a
+                        href="https://www.linkedin.com/in/siddarth-banerjee-163101202/"
+                        className="bg-transparent p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
+                    >
+                        <BsLinkedin
+                            size={40}
+                            className="focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
+                        />
+                    </a>
+                    <a
+                        className="bg-transparent p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
+                        href="https://github.com/Sid-bit28"
+                    >
+                        <FaGithubSquare
+                            size={44}
+                            className="focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
+                        />
+                    </a>
+                </div>
             </motion.div>
         </section>
     );
